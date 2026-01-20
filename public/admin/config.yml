@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: haohua9963-tech/astro-nano-seo # 确认这是你的 GitHub 用户名/仓库名
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "文章管理"
+    folder: "src/content/blog"
+    create: true
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "pubDate", widget: "datetime" }
+      - { label: "描述", name: "description", widget: "string" }
+      - { label: "正文", name: "body", widget: "markdown" }
+      - { label: "隐藏链接", name: "hidden_url", widget: "string", required: false }
