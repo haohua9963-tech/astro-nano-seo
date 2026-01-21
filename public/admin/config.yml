@@ -1,16 +1,11 @@
 backend:
-  name: github
-  repo: haohua9963-tech/astro-nano-seo
+  name: git-gateway
   branch: main
-  # 解决授权报错的核心：使用公共 OAuth 代理
-  base_url: https://decap-cms-github-proxy.vercel.app
-  auth_endpoint: api/auth
 
 # 媒体文件存放路径
 media_folder: "public/images"
 public_folder: "/images"
 
-# 站点预览地址
 display_url: https://www.7776699.xyz
 
 collections:
@@ -18,18 +13,8 @@ collections:
     label: "文章管理"
     folder: "src/content/blog"
     create: true
-    slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string" }
       - { label: "发布日期", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
-      - { label: "正文", name: "body", widget: "markdown" }
-
-  - name: "projects"
-    label: "项目管理"
-    folder: "src/content/projects"
-    create: true
-    fields:
-      - { label: "项目名称", name: "title", widget: "string" }
-      - { label: "项目描述", name: "description", widget: "string" }
       - { label: "正文", name: "body", widget: "markdown" }
