@@ -1,10 +1,8 @@
 backend:
-  name: github
-  repo: haohua9963-tech/astro-nano-seo
+  name: git-gateway # 重点：改为 git-gateway
   branch: main
-  # 关键点：下面这两行是解决弹窗 Not Found 的核心
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  
+local_backend: true # 允许本地测试
 
 media_folder: "public/images"
 public_folder: "/images"
